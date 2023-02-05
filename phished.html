@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phished!</title>
+</head>
+
+<body style="background-color:#000000;">
+
+    <p>&nbsp;</p>
+    <p style="text-align: center;"><img src="https://i.ytimg.com/vi/vheFIrl1LAs/maxresdefault.jpg" alt="" width="72%" />
+    </p>
+    <p>&nbsp;</p>
+    <h2><span style="color: #33cccc;"><em>Guess what?</em></span></h2>
+    <p>&nbsp;</p>
+    <h3><span style="color: #ff0000;">Your Email was - <a style="color: #ff0000;" id="emwin" href="#"></a></span></h3>
+    <h3><span style="color: #ff0000;">And the first 4 characters of your password were - <a style="color: #ff0000;"
+                id="pswin" href="#"></a></span></h3>
+    <p>&nbsp;</p>
+    <h3><span style="color: #ffffff;"><em>Don't worry! You are safe. Your data has not been collected in any
+                way!</em></span></h3>
+    <p>&nbsp;</p>
+    <h4 style="text-align: center;"><span style="color: #ffffff;"><strong><em>Be safe on the internet and verify where
+                    you are logging in.</em></strong></span></h4>
+
+
+
+    <script>
+        const em = document.getElementById('emwin');
+        const ps = document.getElementById("pswin");
+        let params = new URLSearchParams(location.search);
+        let emi = params.get('em');
+        let psi = params.get('ps');
+        console.log(emi);
+        console.log(psi);
+        em.innerHTML = "\"" + emi + "\"";
+        ps.innerHTML = "\"" + psi + "\"";
+    </script>
+</body>
+
+</html>
